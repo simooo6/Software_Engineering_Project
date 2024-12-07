@@ -53,7 +53,6 @@ import javafx.scene.control.Label;
  * @see DisplayContactsController.java
  * @see DisplayAddContactController.java
  * @see ContactManager.java
- * @see BaseController.java ????
  * 
  * @author gruppo9
  * @version 1.0
@@ -65,8 +64,6 @@ public class PrimaryDisplayController {
     /** 
      * The {@code ContactManager} instance used to manage the application's contact list. 
      * This object is initialized at runtime and allows the loading and handling of contact data.
-     * This object may be setted to a specific {@code ContactManager} instace 
-     * via {@link BaseController#setContacts(it.unisa.diem.gruppo9.logic.ContactManager)} ????
      */
     private ContactManager contacts = new ContactManager();
     
