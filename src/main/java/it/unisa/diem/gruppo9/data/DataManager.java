@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.unisa.diem.gruppo9;
+package it.unisa.diem.gruppo9.data;
 
 /**
  *
  * @author simonegrimaldi
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public interface DataManager {
     
 }
