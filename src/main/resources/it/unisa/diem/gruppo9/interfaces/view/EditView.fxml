@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.controller.DisplayEditContactController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController">
    <children>
       <VBox prefHeight="800.0" prefWidth="1000.0">
          <children>
@@ -19,7 +19,7 @@
                         <Insets left="30.0" right="30.0" top="30.0" />
                      </HBox.margin>
                      <image>
-                        <Image url="@../../../../../../../../../../UMLgenerate/src/main/java/it/unisa/diem/gruppo9/interfaces/view/img.jpg" />
+                        <Image url="@img.jpg" />
                      </image>
                   </ImageView>
                   <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="646.0">

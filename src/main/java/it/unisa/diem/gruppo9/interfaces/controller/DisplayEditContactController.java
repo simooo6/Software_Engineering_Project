@@ -95,7 +95,7 @@ public class DisplayEditContactController extends BaseController implements Cont
      * @param event the Action Event triggered by the button click.
      */
     @FXML
-    private void editContactButton(ActionEvent event) {
+    private void editContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of navigating back to the contact view
@@ -103,6 +103,6 @@ public class DisplayEditContactController extends BaseController implements Cont
      * @param event the Action Event triggered by the button click.
      */
     @FXML
-    private void viewContactManagerButton(ActionEvent event) {
+    private void viewContactManagerButton(javafx.event.ActionEvent event) {
     }
 }

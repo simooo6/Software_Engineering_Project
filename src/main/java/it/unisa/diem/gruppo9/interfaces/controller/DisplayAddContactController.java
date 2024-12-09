@@ -93,7 +93,7 @@ public class DisplayAddContactController extends BaseController{
      * @param event the Action Event triggered by the button click.
      */
     @FXML
-    private void addContactButton(ActionEvent event) {
+    private void addContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of navigating back to the contact view
@@ -101,7 +101,7 @@ public class DisplayAddContactController extends BaseController{
      * @param event the Action Event triggered by the button click.
      */
     @FXML
-    private void viewContactManagerButton(ActionEvent event) {
+    private void viewContactManagerButton(javafx.event.ActionEvent event) {
     }
 
 

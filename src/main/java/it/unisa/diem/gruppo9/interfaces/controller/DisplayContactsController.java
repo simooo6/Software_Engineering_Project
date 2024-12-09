@@ -129,49 +129,49 @@ public class DisplayContactsController extends BaseController implements Initial
      * @param event The Action Event triggered by clicking the save button
      */
     @FXML
-    private void saveContactButton(ActionEvent event) {
+    private void saveContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of navigating to the "Add Contact" view 
      * @param event the Action Event triggere by clicking the button
      */
     @FXML
-    private void viewAddContactButton(ActionEvent event) {
+    private void viewAddContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of navigating to the "Edit Contact" view 
      * @param event the Action Event triggere by clicking the button
      */
     @FXML
-    private void viewEditContactButton(ActionEvent event) {
+    private void viewEditContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of deleting the selected contact
      * @param event the Action Event triggered by clicking the button
      */
     @FXML
-    private void deleteContactButton(ActionEvent event) {
+    private void deleteContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of searching contacts based on an input text
      *@param event the Action Event triggered by clicking the button
      */
     @FXML
-    private void searchContactButton(ActionEvent event) {
+    private void searchContactButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action of removing the current search and resetting the contact list
      * @param event the Action Event triggered by clicking the button
      */
     @FXML
-    private void cancelSearchButton(ActionEvent event) {
+    private void cancelSearchButton(javafx.event.ActionEvent event) {
     }
 
     /**Handles the action triggered when the user interacts with the search text field
      *@param event the Action Event triggered by the text field
      */
     @FXML
-    private void SearchTextField(ActionEvent event) {
+    private void SearchTextField(javafx.event.ActionEvent event) {
     }
     
 }
