@@ -1,7 +1,5 @@
 package it.unisa.diem.gruppo9.logic;
 
-import it.unisa.diem.gruppo9.logic.ContactManager;
-
 /**
  * @file ContactManagerAware.java
  * @brief Represents an interface to define a contract for classes that require a {@code ContactManager} instance.
