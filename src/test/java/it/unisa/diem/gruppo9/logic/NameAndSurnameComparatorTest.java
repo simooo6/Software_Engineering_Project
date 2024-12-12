@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author simonegrimaldi
+ * @author gruppo9
  */
 public class NameAndSurnameComparatorTest {
     
