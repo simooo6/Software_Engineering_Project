@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.DisplayContactsController">
+<SplitPane dividerPositions="0.1939799331103679" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.DisplayContactsController">
   <items>
-    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="150.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <VBox maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveContactButton" prefHeight="60.0" prefWidth="80.0" text="Save" translateX="22.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="addButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewAddContactButton" prefHeight="60.0" prefWidth="100.0" text="Add Contact" translateX="15.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="editButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewEditContactButton" prefHeight="60.0" prefWidth="80.0" text="Edit" translateX="22.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="deleteButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteContactButton" prefHeight="60.0" prefWidth="80.0" text="Delete" translateX="22.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
+            <Button fx:id="addButton" layoutX="20.0" layoutY="177.0" mnemonicParsing="false" onAction="#viewAddContactButton" prefHeight="94.0" prefWidth="128.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="editButton" layoutX="31.0" layoutY="415.0" mnemonicParsing="false" onAction="#viewEditContactButton" prefHeight="68.0" prefWidth="128.0" text="Edit" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton" layoutX="31.0" layoutY="497.0" mnemonicParsing="false" onAction="#deleteContactButton" prefHeight="43.0" prefWidth="128.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <Separator layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+            <Button fx:id="saveButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveContactButton" prefHeight="43.0" prefWidth="128.0" text="Save" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
+            <Separator layoutX="-5.0" layoutY="398.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
          </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="128.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <VBox prefHeight="796.0" prefWidth="839.0">
-               <children>
-                  <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="840.0">
-                     <children>
-                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchContactButton" text="Search" translateX="380.0" translateY="12.0" />
-                        <Button fx:id="cancelSearchButton" mnemonicParsing="false" onAction="#cancelSearchButton" text="Cancel" translateX="400.0" translateY="12.0" />
-                        <TextField fx:id="searchTextField" onAction="#SearchTextField" prefHeight="27.0" prefWidth="168.0" scaleX="2.0" translateY="12.0">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <TableView fx:id="tableView" prefHeight="746.0" prefWidth="839.0">
-                    <columns>
-                      <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
-                        <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="Surname" />
-                        <TableColumn fx:id="phoneNumberColumn" prefWidth="75.0" text="Phone Number" />
-                        <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
+            <Button fx:id="searchButton" layoutX="508.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchContactButton" prefHeight="31.0" prefWidth="128.0" text="Search" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="58.0" />
+            <Button fx:id="cancelSearchButton" layoutX="652.0" layoutY="58.0" mnemonicParsing="false" onAction="#cancelSearchButton" prefHeight="31.0" prefWidth="128.0" text="Cancel" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="58.0" />
+            <TextField fx:id="searchTextField" layoutX="505.0" layoutY="14.0" prefHeight="31.0" prefWidth="272.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0" />
+            <Label layoutX="20.0" layoutY="24.0" text="My Contacts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="24.0">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutX="58.0" layoutY="207.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+              <columns>
+                <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="Surname" />
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="phoneNumberColumn" prefWidth="75.0" text="PhoneNumber" />
+                  <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></AnchorPane>
   </items>
 </SplitPane>
