@@ -3,7 +3,6 @@ package it.unisa.diem.gruppo9.interfaces.controller;
 import it.unisa.diem.gruppo9.interfaces.change.ChangeView;
 import it.unisa.diem.gruppo9.logic.ContactManager;
 import it.unisa.diem.gruppo9.logic.ContactManagerAware;
-import java.awt.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -65,7 +64,7 @@ public class DisplayAddContactController extends BaseController {
      * Text field to enter the contact's surname
      */
     @FXML
-    private TextField surnnameField;
+    private TextField surnameField;
 
     /**
      * Text field to enter the contact's first phone number,
@@ -118,6 +117,14 @@ public class DisplayAddContactController extends BaseController {
     private Button cancelButton;
 
     /**
+     * Handles the back end binding of the addButton. The addButton will be deatcivated
+     * till almost one between name and surname is not empty.
+     */
+    public void initialize() {
+        addButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
+    }
+
+    /**
      * FXML methods:
      */
     /**
@@ -128,6 +135,24 @@ public class DisplayAddContactController extends BaseController {
      */
     @FXML
     private void addContactButton(javafx.event.ActionEvent event) {
+        ContactManager contacts = getContacts();
+        String[] phoneNumber = {
+            phoneNumber1.getText().isEmpty() ? "-" : phoneNumber1.getText(),
+            phoneNumber2.getText().isEmpty() ? "-" : phoneNumber2.getText(),
+            phoneNumber3.getText().isEmpty() ? "-" : phoneNumber3.getText()
+        };
+
+        String[] email = {
+            email1.getText().isEmpty() ? "-" : email1.getText(),
+            email2.getText().isEmpty() ? "-" : email2.getText(),
+            email3.getText().isEmpty() ? "-" : email3.getText()
+        };
+    
+        
+        contacts.addContacts(contacts.createContact(surnameField.getText(),nameField.getText(), phoneNumber, email));
+
+        
+        this.view.contactView(event, contacts);
     }
 
     /**
@@ -138,6 +163,8 @@ public class DisplayAddContactController extends BaseController {
      */
     @FXML
     private void viewContactManagerButton(javafx.event.ActionEvent event) {
+       ContactManager contacts = getContacts();
+       this.view.contactView(event, contacts);    
     }
 
 }
