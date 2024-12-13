@@ -61,7 +61,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * @version 1.0
  * @date 2024-12-07
  */
-public class DisplayContactsController extends BaseController{
+public class DisplayContactsController extends BaseController {
 
     /**
      * Handles view transitions whitin the application
@@ -124,48 +124,51 @@ public class DisplayContactsController extends BaseController{
      * Column in the table view for displaying contact names
      */
     @FXML
-    private TableColumn<Contact,String> nameColumn;
+    private TableColumn<Contact, String> nameColumn;
 
     /**
      * Column in the table view for displaying contact surnames
      */
     @FXML
-    private TableColumn<Contact,String> surnameColumn;
+    private TableColumn<Contact, String> surnameColumn;
 
     /**
      * Column in the table view for displaying contact phone numbers
      */
     @FXML
-    private TableColumn<Contact,String> phoneNumberColumn;
+    private TableColumn<Contact, String> phoneNumberColumn;
 
     /**
      * Column in the table view for displaying contact emails
      */
     @FXML
-    private TableColumn<Contact,String> emailColumn;
+    private TableColumn<Contact, String> emailColumn;
 
     /**
      * Initializes the controller class. It is called automatically after the
      * FXML file is loaded.
-     * 
-     * Specifically it initialize the table view with a list of contact
-     * retrived from the {@code ContactManager } object; configure the table view column 
-     * with their respective values, and initialize the binding property of the button: search,
-     * cancel, edit and delete.
-     * 
-     * @pre The tableView and the buttons must be correctly associated with thei respective 
-     * references in the controller
-     * @pre the {@code getContact()} method must return a valid {@code ContactManager} object
-     * @pre The contact object retured by {@code getListOfContacts()} must contains consistent values
-     * 
+     *
+     * Specifically it initialize the table view with a list of contact retrived
+     * from the {@code ContactManager } object; configure the table view column
+     * with their respective values, and initialize the binding property of the
+     * button: search, cancel, edit and delete.
+     *
+     * @pre The tableView and the buttons must be correctly associated with thei
+     * respective references in the controller
+     * @pre the {@code getContact()} method must return a valid
+     * {@code ContactManager} object
+     * @pre The contact object retured by {@code getListOfContacts()} must
+     * contains consistent values
+     *
      * @post The table view must be correctly populated with the contacts
-     * @post Contact's data must be correctly displayed 
-     * @post The button are enabled/disabled dinamically based on the specified conditions
-     * 
+     * @post Contact's data must be correctly displayed
+     * @post The button are enabled/disabled dinamically based on the specified
+     * conditions
+     *
      */
     public void initialize() {
         ContactManager contacts = getContacts();
-        
+
         tableView.setItems(FXCollections.observableArrayList(contacts.getListOfContacts()));
         surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -180,7 +183,7 @@ public class DisplayContactsController extends BaseController{
             String[] emailArray = cellData.getValue().getEmail();
             String emails = String.join("\n", emailArray);
             return new SimpleStringProperty(emails);
-        });    
+        });
 
         tableView.refresh();
 
@@ -189,9 +192,12 @@ public class DisplayContactsController extends BaseController{
         editButton.disableProperty().bind(tableView.getSelectionModel().selectedItemProperty().isNull());
         deleteButton.disableProperty().bind(tableView.getSelectionModel().selectedItemProperty().isNull());
     }
+
     /**
-     * @pre The {@code ChangeView} class must be available in the project and correctly defined.
-     * @post The view object has been initialised and contains a valid {@code ChangeView} instance.
+     * @pre The {@code ChangeView} class must be available in the project and
+     * correctly defined.
+     * @post The view object has been initialised and contains a valid
+     * {@code ChangeView} instance.
      */
     public DisplayContactsController() {
         this.view = new ChangeView();
@@ -217,7 +223,7 @@ public class DisplayContactsController extends BaseController{
     private void viewAddContactButton(javafx.event.ActionEvent event) {
         ContactManager contacts = getContacts();
         tableView.setItems(contacts.getListOfContacts());
-        view.addContactView(event,contacts);
+        view.addContactView(event, contacts);
     }
 
     /**
@@ -228,11 +234,11 @@ public class DisplayContactsController extends BaseController{
     @FXML
     private void viewEditContactButton(javafx.event.ActionEvent event) {
         ContactManager contacts = getContacts();
-        
+
         Contact selectedContact = tableView.getSelectionModel().getSelectedItem();
-    
+
         if (selectedContact != null) {
-            view.editContactView(event, contacts,selectedContact);
+            view.editContactView(event, contacts, selectedContact);
         }
     }
 
@@ -249,7 +255,7 @@ public class DisplayContactsController extends BaseController{
             contacts.deleteContact(selectedContact);
             tableView.getItems().remove(selectedContact);
         }
-        
+
         tableView.getSelectionModel().clearSelection();
     }
 
@@ -261,7 +267,7 @@ public class DisplayContactsController extends BaseController{
     @FXML
     private void searchContactButton(javafx.event.ActionEvent event) {
         ContactManager contacts = getContacts();
-    
+
         String searchText = searchTextField.getText();
         System.out.println(searchText);
         if (!searchText.isEmpty()) {
@@ -271,7 +277,7 @@ public class DisplayContactsController extends BaseController{
             // Aggiorna la TableView con i risultati
             tableView.setItems(filteredContacts);
         }
-         searchTextField.setDisable(true);
+        searchTextField.setDisable(true);
     }
 
     /**
@@ -286,6 +292,5 @@ public class DisplayContactsController extends BaseController{
         searchTextField.setText("");
         this.initialize();
     }
-    
-    
+
 }
