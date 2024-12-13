@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.PrimaryDisplayController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.PrimaryDisplayController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="799.0" prefWidth="1003.0">
-         <children>
-            <Label fx:id="Title" text="BricoRubrica" translateY="200.0">
-               <font>
-                  <Font size="96.0" />
-               </font>
-            </Label>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" translateY="300.0">
-               <children>
-                  <Button fx:id="myContacts" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewContactManagerButton" prefHeight="80.0" prefWidth="200.0" text="My Contacts" translateX="-100.0">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="addContact" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewAddContactButton" prefHeight="80.0" prefWidth="200.0" text="Add Contact" translateX="100.0">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
+      <Label layoutX="361.0" layoutY="67.0" prefHeight="85.0" prefWidth="280.0" text="BricoRubrica" AnchorPane.leftAnchor="361.0" AnchorPane.rightAnchor="359.0">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="myContacts" layoutX="295.0" layoutY="283.0" mnemonicParsing="false" onAction="#viewContactManagerButton" prefHeight="224.0" prefWidth="413.0" style="-fx-background-color: grey;" text="My Contacts" textFill="WHITE" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="292.0">
+         <font>
+            <Font size="27.0" />
+         </font></Button>
+      <Button fx:id="addContact" layoutX="295.0" layoutY="539.0" mnemonicParsing="false" onAction="#viewAddContactButton" prefHeight="74.0" prefWidth="413.0" style="-fx-background-color: blue;" text="Add Contact" textFill="WHITE" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="292.0">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Separator layoutY="162.0" prefHeight="16.0" prefWidth="564.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
-</Pane>
+</AnchorPane>
