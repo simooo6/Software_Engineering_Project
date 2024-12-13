@@ -1,17 +1,19 @@
 package it.unisa.diem.gruppo9.interfaces.controller;
 
 import it.unisa.diem.gruppo9.interfaces.change.ChangeView;
+import it.unisa.diem.gruppo9.logic.Contact;
 import it.unisa.diem.gruppo9.logic.ContactManager;
-import it.unisa.diem.gruppo9.logic.ContactManagerAware;
-import java.awt.event.ActionEvent;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * @file DisplayContactsController.java
@@ -59,17 +61,12 @@ import javafx.scene.control.TextField;
  * @version 1.0
  * @date 2024-12-07
  */
-public class DisplayContactsController extends BaseController implements Initializable {
+public class DisplayContactsController extends BaseController{
 
     /**
      * Handles view transitions whitin the application
      */
     private ChangeView view;
-
-    /**
-     * Manages the application's contact data
-     */
-    private ContactManager contacts;
 
     /**
      * Button to save changes applied and to export it on a file
@@ -121,42 +118,83 @@ public class DisplayContactsController extends BaseController implements Initial
      * Table view for displaying the list of contacts
      */
     @FXML
-    private TableView<?> tableView;
+    private TableView<Contact> tableView;
 
     /**
      * Column in the table view for displaying contact names
      */
     @FXML
-    private TableColumn<?, ?> nameColumn;
+    private TableColumn<Contact,String> nameColumn;
 
     /**
      * Column in the table view for displaying contact surnames
      */
     @FXML
-    private TableColumn<?, ?> surnameColumn;
+    private TableColumn<Contact,String> surnameColumn;
 
     /**
      * Column in the table view for displaying contact phone numbers
      */
     @FXML
-    private TableColumn<?, ?> phoneNumberColumn;
+    private TableColumn<Contact,String> phoneNumberColumn;
 
     /**
      * Column in the table view for displaying contact emails
      */
     @FXML
-    private TableColumn<?, ?> emailColumn;
+    private TableColumn<Contact,String> emailColumn;
 
     /**
      * Initializes the controller class. It is called automatically after the
-     * FXML file is loaded
-     *
-     * @param url indicate the location of the FXML file
-     * @param rb the Resource Bundle for lacalization, if applicable
+     * FXML file is loaded.
+     * 
+     * Specifically it initialize the table view with a list of contact
+     * retrived from the {@code ContactManager } object; configure the table view column 
+     * with their respective values, and initialize the binding property of the button: search,
+     * cancel, edit and delete.
+     * 
+     * @pre The tableView and the buttons must be correctly associated with thei respective 
+     * references in the controller
+     * @pre the {@code getContact()} method must return a valid {@code ContactManager} object
+     * @pre The contact object retured by {@code getListOfContacts()} must contains consistent values
+     * 
+     * @post The table view must be correctly populated with the contacts
+     * @post Contact's data must be correctly displayed 
+     * @post The button are enabled/disabled dinamically based on the specified conditions
+     * 
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize() {
+        ContactManager contacts = getContacts();
+        
+        tableView.setItems(FXCollections.observableArrayList(contacts.getListOfContacts()));
+        surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        phoneNumberColumn.setCellValueFactory(cellData -> {
+            String[] phoneNumberArray = cellData.getValue().getPhoneNumber();
+            String phoneNumbers = String.join("\n", phoneNumberArray);
+            return new SimpleStringProperty(phoneNumbers);
+        });
+
+        emailColumn.setCellValueFactory(cellData -> {
+            String[] emailArray = cellData.getValue().getEmail();
+            String emails = String.join("\n", emailArray);
+            return new SimpleStringProperty(emails);
+        });    
+
+        tableView.refresh();
+
+        searchButton.disableProperty().bind(searchTextField.textProperty().isEmpty());
+        cancelSearchButton.disableProperty().bind(searchTextField.textProperty().isEmpty());
+        editButton.disableProperty().bind(tableView.getSelectionModel().selectedItemProperty().isNull());
+        deleteButton.disableProperty().bind(tableView.getSelectionModel().selectedItemProperty().isNull());
+    }
+    /**
+     * @pre The {@code ChangeView} class must be available in the project and correctly defined.
+     * @post The view object has been initialised and contains a valid {@code ChangeView} instance.
+     */
+    public DisplayContactsController() {
+        this.view = new ChangeView();
     }
 
     /**
@@ -165,8 +203,9 @@ public class DisplayContactsController extends BaseController implements Initial
      *
      * @param event The Action Event triggered by clicking the save button
      */
-    @FXML
-    private void saveContactButton(javafx.event.ActionEvent event) {
+    private void saveContactButton(javafx.event.ActionEvent event) throws IOException {
+        ContactManager contacts = getContacts();
+        contacts.saveContact();
     }
 
     /**
@@ -176,6 +215,9 @@ public class DisplayContactsController extends BaseController implements Initial
      */
     @FXML
     private void viewAddContactButton(javafx.event.ActionEvent event) {
+        ContactManager contacts = getContacts();
+        tableView.setItems(contacts.getListOfContacts());
+        view.addContactView(event,contacts);
     }
 
     /**
@@ -185,6 +227,13 @@ public class DisplayContactsController extends BaseController implements Initial
      */
     @FXML
     private void viewEditContactButton(javafx.event.ActionEvent event) {
+        ContactManager contacts = getContacts();
+        
+        Contact selectedContact = tableView.getSelectionModel().getSelectedItem();
+    
+        if (selectedContact != null) {
+            view.editContactView(event, contacts,selectedContact);
+        }
     }
 
     /**
@@ -194,6 +243,14 @@ public class DisplayContactsController extends BaseController implements Initial
      */
     @FXML
     private void deleteContactButton(javafx.event.ActionEvent event) {
+        ContactManager contacts = getContacts();
+        Contact selectedContact = tableView.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            contacts.deleteContact(selectedContact);
+            tableView.getItems().remove(selectedContact);
+        }
+        
+        tableView.getSelectionModel().clearSelection();
     }
 
     /**
@@ -203,6 +260,18 @@ public class DisplayContactsController extends BaseController implements Initial
      */
     @FXML
     private void searchContactButton(javafx.event.ActionEvent event) {
+        ContactManager contacts = getContacts();
+    
+        String searchText = searchTextField.getText();
+        System.out.println(searchText);
+        if (!searchText.isEmpty()) {
+            // Ottieni i contatti filtrati
+            ObservableList<Contact> filteredContacts = contacts.searchContact(searchText);
+
+            // Aggiorna la TableView con i risultati
+            tableView.setItems(filteredContacts);
+        }
+         searchTextField.setDisable(true);
     }
 
     /**
@@ -213,16 +282,10 @@ public class DisplayContactsController extends BaseController implements Initial
      */
     @FXML
     private void cancelSearchButton(javafx.event.ActionEvent event) {
+        searchTextField.setDisable(false);
+        searchTextField.setText("");
+        this.initialize();
     }
-
-    /**
-     * Handles the action triggered when the user interacts with the search text
-     * field
-     *
-     * @param event the Action Event triggered by the text field
-     */
-    @FXML
-    private void SearchTextField(javafx.event.ActionEvent event) {
-    }
-
+    
+    
 }
