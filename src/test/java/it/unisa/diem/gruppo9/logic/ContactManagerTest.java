@@ -185,6 +185,15 @@ public class ContactManagerTest {
      *
      * Expected Result: - A contact object is returned with the specified
      * details.
+     *
+     * <p>
+     * The
+     * {@link ContactManager#createContact(java.lang.String, java.lang.String, java.lang.String[], java.lang.String[])}
+     * method is simply a call to the {@code Contact} contstructor. It
+     * represents in this sense the integration test between this very class and
+     * the {@code Contact} class while invoking all of its getter methods and
+     * the constructor.
+     * </p>
      */
     @Test
     public void testCreateContact() {
@@ -194,6 +203,8 @@ public class ContactManagerTest {
         Contact contact = contactManager.createContact("Dylan", "Bob", phoneNumbers, emails);
 
         assertNotNull(contact);
+
+        //integration testing section 
         assertEquals("Dylan", contact.getSurname());
         assertEquals("Bob", contact.getName());
         assertArrayEquals(phoneNumbers, contact.getPhoneNumber());
@@ -257,6 +268,17 @@ public class ContactManagerTest {
      * @test Tests the saveContact method by writing contacts on a file.
      *
      * Expected Result: - The file is created and contains the correct data.
+     *
+     * <p>
+     * Furthermore this test method represents the integration test between this
+     * very class with the invocation of the
+     * {@link ContactManager#addContacts(it.unisa.diem.gruppo9.logic.Contact)}
+     * and {@link ContactManager#saveContact()} and the {@code Contact} class
+     * while invoking its constructor. To be even more specific in the
+     * {@link ContactManager#saveContact()} method there is a call on a
+     * {@link PrintWriter#print(it.unisa.diem.gruppo9.logic.Contact)} that uses
+     * the {@link Contact#toString()} method.
+     * </p>
      */
     @Test
     public void testSaveContact() throws IOException {
@@ -271,6 +293,16 @@ public class ContactManagerTest {
      * @test Tests the loadContact method by loading contacts from a file.
      *
      * Expected Result: - The contact list is populated with data from the file.
+     *
+     * <p>
+     * Furthermore this test method represents the integration test between this
+     * very class with the invocation of {@link ContactManager#loadContact()}
+     * and the {@code Contact} class. To be even more specific in the
+     * {@link ContactManager#loadContact()} method there is a call on a
+     * {@link ContactManager#addContacts(it.unisa.diem.gruppo9.logic.Contact)}that
+     * uses a previoulsy created instance of {@code Contact} via its
+     * constructor.
+     * </p>
      */
     @Test
     public void testLoadContact() throws IOException {
@@ -278,5 +310,4 @@ public class ContactManagerTest {
         System.out.println("Testing load contact list");
         assertDoesNotThrow(() -> contactManager.loadContact());
     }
-
 }
