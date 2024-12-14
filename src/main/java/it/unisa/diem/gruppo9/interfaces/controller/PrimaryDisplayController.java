@@ -59,7 +59,7 @@ import javafx.scene.control.Label;
  * @see DisplayAddContactController
  * @see ContactManager
  *
- * @author gruppo9 - marioambrosone
+ * @author gruppo9
  * @version 1.0
  * @date 2024-12-06
  */

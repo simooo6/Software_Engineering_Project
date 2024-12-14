@@ -4,7 +4,6 @@ import it.unisa.diem.gruppo9.interfaces.change.ChangeView;
 import it.unisa.diem.gruppo9.logic.Contact;
 import it.unisa.diem.gruppo9.logic.ContactManager;
 import it.unisa.diem.gruppo9.logic.ContactManagerAware;
-import java.awt.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
