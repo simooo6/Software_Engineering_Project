@@ -50,11 +50,6 @@ public class DisplayAddContactController extends BaseController {
     private ChangeView view = new ChangeView();
 
     /**
-     * Manages the application's contact data
-     */
-    private ContactManager contacts;
-
-    /**
      * Text field to enter the contact's name
      */
     @FXML
@@ -117,29 +112,29 @@ public class DisplayAddContactController extends BaseController {
     private Button cancelButton;
 
     /**
-     * Handles the back end binding of the addButton. The addButton will be deatcivated
-     * till almost one between name and surname is not empty.
-     * 
-     * @invariant {@code addButton}, {@code nameField},{@code surnameField} must remain valid and
-     * not null for the duration of the binding
-     * @invariant The condition for the binding always evaluates to a valid boolen
-     * value (true or false), wich dirrectly affects the {@code disableProperty}
-     * @pre {@code addButton}, {@code nameField},{@code surnameField}  must
-     * be properly initialized and cannot be null
-     * @pre {@code namefield.textProperty()} and {@code surnameField.textProperty()} 
-     * must be properly observable to allow the binding to work
-     * @post The {@code addButton} will be disabled whenever both name
-     * and surname field are empty
-     * @post The {@code addButton} will be enabled as soon as at least
-     * one between name and surname field is not empty
+     * Handles the back end binding of the addButton. The addButton will be
+     * deatcivated till almost one between name and surname is not empty.
+     *
+     * @invariant {@code addButton}, {@code nameField},{@code surnameField} must
+     * remain valid and not null for the duration of the binding
+     * @invariant The condition for the binding always evaluates to a valid
+     * boolen value (true or false), wich dirrectly affects the
+     * {@code disableProperty}
+     *
+     * @pre {@code addButton}, {@code nameField},{@code surnameField} must be
+     * properly initialized and cannot be null
+     * @pre {@code namefield.textProperty()} and
+     * {@code surnameField.textProperty()} must be properly observable to allow
+     * the binding to work
+     * @post The {@code addButton} will be disabled whenever both name and
+     * surname field are empty
+     * @post The {@code addButton} will be enabled as soon as at least one
+     * between name and surname field is not empty
      */
     public void initialize() {
         addButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
     }
 
-    /**
-     * FXML methods:
-     */
     /**
      * Handles the action of adding a new contact when the "addButton" is
      * clicked
@@ -160,11 +155,9 @@ public class DisplayAddContactController extends BaseController {
             email2.getText().isEmpty() ? "-" : email2.getText(),
             email3.getText().isEmpty() ? "-" : email3.getText()
         };
-    
-        
-        contacts.addContacts(contacts.createContact(surnameField.getText(),nameField.getText(), phoneNumber, email));
 
-        
+        contacts.addContacts(contacts.createContact(surnameField.getText(), nameField.getText(), phoneNumber, email));
+
         this.view.contactView(event, contacts);
     }
 
@@ -176,8 +169,8 @@ public class DisplayAddContactController extends BaseController {
      */
     @FXML
     private void viewContactManagerButton(javafx.event.ActionEvent event) {
-       ContactManager contacts = getContacts();
-       this.view.contactView(event, contacts);    
+        ContactManager contacts = getContacts();
+        this.view.contactView(event, contacts);
     }
 
 }

@@ -196,7 +196,13 @@ public class DisplayContactsController extends BaseController {
     }
 
     /**
-     * @invariant The view object is always a valid instance of ChangeView.
+     * Constructs an instance of the {@code DisplayContactsController}.
+     * <p>
+     * This constructor initializes the {@code ChangeView} instance used for
+     * managing view transitions.
+     * </p>
+     *
+     * @invariant The view object is declared as a {@code ChangeView}.
      *
      * @pre The {@code ChangeView} class must be available in the project and
      * correctly defined.
@@ -276,10 +282,9 @@ public class DisplayContactsController extends BaseController {
         String searchText = searchTextField.getText();
         System.out.println(searchText);
         if (!searchText.isEmpty()) {
-            // Ottieni i contatti filtrati
+
             ObservableList<Contact> filteredContacts = contacts.searchContact(searchText);
 
-            // Aggiorna la TableView con i risultati
             tableView.setItems(filteredContacts);
         }
         searchTextField.setDisable(true);

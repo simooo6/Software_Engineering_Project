@@ -40,17 +40,26 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ContactTest {
 
+    /**
+     * Create the instance of {@code Contact} class used for testing
+     */
     private Contact contact;
 
     public ContactTest() {
 
     }
 
+    /**
+     * Initializes resources before all tests.
+     */
     @BeforeAll
     public static void setUpClass() {
         System.out.println("\n\nStarting test Contact.java...\n");
     }
 
+    /**
+     * Cleans up resources after all tests.
+     */
     @AfterAll
     public static void tearDownClass() {
         System.out.println("\n\n\nFinished testing Contact.java.\n\n");

@@ -24,8 +24,7 @@ import java.util.Comparator;
  * the content of the user's observed list of contacts is performed.
  * <p>
  *
- * </p>
- * @see Comparator
+ * </p> @see Comparator
  *
  * @author gruppo9
  * @version 1.0
@@ -41,10 +40,12 @@ public class NameAndSurnameComparator implements Comparator<Contact> {
      * {@code surname} attributes. The comparison follows the natural
      * lexicographic ordering of {@link String}.
      * </p>
-     * 
-     * @pre A {@code NameAndSurnameComparator} instance must be declared with the associated default constructor
+     *
+     * @pre A {@code NameAndSurnameComparator} instance must be declared with
+     * the associated default constructor
      * @pre {@code name != null || surname != null}
-     * @pre Both {@code o1} and {@code o2} must not be null (the contacts must be valid).
+     * @pre Both {@code o1} and {@code o2} must not be null (the contacts must
+     * be valid).
      *
      * @post The method does not modify the state of the {@code o1} or
      * {@code o2} objects.
@@ -73,19 +74,19 @@ public class NameAndSurnameComparator implements Comparator<Contact> {
     public int compare(Contact o1, Contact o2) {
 
         if (o1.getSurname() == null && o2.getSurname() != null) {
-            return o1.getName().compareToIgnoreCase(o2.getSurname()); //caso 3,o1nome - o2cognome
+            return o1.getName().compareToIgnoreCase(o2.getSurname());
         }
         if (o2.getSurname() == null && o1.getSurname() != null) {
-            return o1.getSurname().compareToIgnoreCase(o2.getName());//caso3,o1cognome-o2nome
+            return o1.getSurname().compareToIgnoreCase(o2.getName());
         }
         if (o1.getSurname() == null && o2.getSurname() == null || (o1.getSurname().equals(o2.getSurname()))) {
             if (!o1.getName().equals(o2.getName())) {
-                return o1.getName().compareToIgnoreCase(o2.getName());//caso 2
+                return o1.getName().compareToIgnoreCase(o2.getName());
             } else {
                 return 0;
             }
         }
 
-        return o1.getSurname().compareToIgnoreCase(o2.getSurname());//caso1
+        return o1.getSurname().compareToIgnoreCase(o2.getSurname());
     }
 }

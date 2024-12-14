@@ -35,6 +35,9 @@ import org.junit.jupiter.api.Test;
  */
 public class ContactManagerTest {
 
+    /**
+     * Create the instance of {@code ContactManager} class used for testing
+     */
     private ContactManager contactManager;
 
     public ContactManagerTest() {

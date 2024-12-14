@@ -45,11 +45,17 @@ public class NameAndSurnameComparatorTest {
 
     }
 
+    /**
+     * Initializes resources before all tests.
+     */
     @BeforeAll
     public static void setUpClass() {
         System.out.println("\n\nStarting test NameAndSurnameComparator.java...\n\n");
     }
 
+    /**
+     * Cleans up resources after all tests.
+     */
     @AfterAll
     public static void tearDownClass() {
         System.out.println("\n\nFinished testing NameAndSurnameComparator.java.\n\n");

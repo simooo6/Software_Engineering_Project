@@ -43,11 +43,17 @@ public class BaseControllerTest {
     public BaseControllerTest() {
     }
 
+    /**
+     * Initializes resources before all tests.
+     */
     @BeforeAll
     public static void setUpClass() {
         System.out.println("\n\nStarting test BaseControllerTest.java...\n\n");
     }
 
+    /**
+     * Cleans up resources after all tests.
+     */
     @AfterAll
     public static void tearDownClass() {
         System.out.println("\n\nFinished testing BaseControllerTest.java\n\n");

@@ -89,7 +89,7 @@ public class Contact {
      * @throws NullPointerException if one of the arrays doesn't respect the
      * invariants
      */
-    public Contact(String surname, String name,  String[] phoneNumber, String[] email) {
+    public Contact(String surname, String name, String[] phoneNumber, String[] email) {
         if (name.isEmpty() && surname.isEmpty()) {
             throw new RuntimeException("A contact must have at least a name or a surname.");
         } else {
@@ -247,6 +247,7 @@ public class Contact {
             throw new RuntimeException("A contact must have less than four emails.");
         }
     }
+
     /**
      * Returns a string representation of the {@code Contact} object in a
      * specific format.

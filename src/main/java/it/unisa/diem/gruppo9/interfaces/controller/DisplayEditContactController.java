@@ -49,11 +49,6 @@ import javafx.scene.control.TextField;
 public class DisplayEditContactController extends BaseController implements ContactManagerAware {
 
     /**
-     * Manages the application's contact data
-     */
-    private ContactManager contacts;
-
-    /**
      * Handles view transitions whitin the application
      */
     private ChangeView view;
@@ -127,7 +122,7 @@ public class DisplayEditContactController extends BaseController implements Cont
      * managing view transitions.
      * </p>
      *
-     * @invariant The view object is always a valid instance of ChangeView.
+     * @invariant The view object is declared as a {@code ChangeView}.
      *
      * @pre The {@code ChangeView} class must be available in the project and
      * correctly defined.

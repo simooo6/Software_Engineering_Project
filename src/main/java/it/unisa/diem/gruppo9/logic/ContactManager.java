@@ -270,7 +270,7 @@ public class ContactManager implements DataManager {
     @Override
     public ContactManager loadContact() throws FileNotFoundException, IOException {
         String filename = "rubrica.csv";
-        String nome = filename.split("\\n")[0]; //utilizzo il metodo escape 
+        String nome = filename.split("\\n")[0];
 
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             if (br.readLine() == null) {

@@ -60,7 +60,7 @@ import javafx.scene.control.Label;
  * @see ContactManager
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-06
  */
 public class PrimaryDisplayController extends BaseController {
@@ -94,6 +94,24 @@ public class PrimaryDisplayController extends BaseController {
     private Button addContact;
 
     /**
+     * Constructs an instance of the {@code PrimaryDisplayController}.
+     * <p>
+     * This constructor initializes the {@code ChangeView} instance used for
+     * managing view transitions.
+     * </p>
+     *
+     * @invariant The view object is declared as a {@code ChangeView}.
+     *
+     * @pre The {@code ChangeView} class must be available in the project and
+     * correctly defined.
+     * @post A new instance of {@code PrimaryDisplayController} is created with
+     * a valid {@code ChangeView} object.
+     */
+    public PrimaryDisplayController() {
+        this.view = new ChangeView();
+    }
+
+    /**
      * Handles the event triggered when the "My Contacts" button is pressed.
      * <p>
      * This method performs the following actions:
@@ -105,13 +123,10 @@ public class PrimaryDisplayController extends BaseController {
      * </ul>
      *
      * @param event the action event triggered by the button press.
+     *
      * @see ContactManager#loadContact()
      * @see ChangeView#contactView(ActionEvent, ContactManager)
      */
-    public PrimaryDisplayController() {
-        this.view = new ChangeView();
-    }
-
     @FXML
     private void viewContactManagerButton(ActionEvent event) throws IOException {
         ContactManager contacts = getContacts();

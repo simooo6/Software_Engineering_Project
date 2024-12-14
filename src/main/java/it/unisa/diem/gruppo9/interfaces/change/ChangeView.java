@@ -128,17 +128,14 @@ public class ChangeView {
      */
     public void contactView(ActionEvent event, ContactManager contacts) {
         try {
-            // Carica la nuova vista
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/it/unisa/diem/gruppo9/interfaces/view/ContactsView.fxml"));
             Parent newView = loader.load();
 
-            // Recupera la scena corrente dal nodo che ha generato l'evento
             Scene currentScene = ((javafx.scene.Node) event.getSource()).getScene();
 
-            // Imposta il nuovo root
             currentScene.setRoot(newView);
 
-            // Passa i dati al nuovo controller
             DisplayContactsController controller = loader.getController();
             controller.setContacts(contacts);
             controller.initialize();
@@ -183,17 +180,14 @@ public class ChangeView {
      */
     public void addContactView(ActionEvent event, ContactManager contacts) {
         try {
-            // Carica la nuova vista
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/it/unisa/diem/gruppo9/interfaces/view/AddView.fxml"));
             Parent newView = loader.load();
 
-            // Recupera la scena corrente dal nodo che ha generato l'evento
             Scene currentScene = ((javafx.scene.Node) event.getSource()).getScene();
 
-            // Imposta il nuovo root
             currentScene.setRoot(newView);
 
-            // Passa i dati al nuovo controller
             DisplayAddContactController controller = loader.getController();
             controller.setContacts(contacts);
 
@@ -241,17 +235,14 @@ public class ChangeView {
      */
     public void editContactView(ActionEvent event, ContactManager contacts, Contact c) {
         try {
-            // Carica la nuova vista
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/it/unisa/diem/gruppo9/interfaces/view/EditView.fxml"));
             Parent newView = loader.load();
 
-            // Recupera la scena corrente dal nodo che ha generato l'evento
             Scene currentScene = ((javafx.scene.Node) event.getSource()).getScene();
 
-            // Imposta il nuovo root
             currentScene.setRoot(newView);
 
-            // Passa i dati al nuovo controller
             DisplayEditContactController controller = loader.getController();
             controller.setContacts(contacts);
             controller.setSelectedContact(c);
