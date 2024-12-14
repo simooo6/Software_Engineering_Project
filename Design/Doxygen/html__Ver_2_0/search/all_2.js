@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['cancelbutton_0',['cancelButton',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_add_contact_controller.html#abffe5cb788e6a2a47c2b2dfb0bde222c',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayAddContactController.cancelButton'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_edit_contact_controller.html#aa428c955fc1e9673d6eebce6f03f49e9',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController.cancelButton']]],
+  ['cancelsearchbutton_1',['cancelSearchButton',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_contacts_controller.html#abf883f9e700a623f88652a3fb737f076',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayContactsController.cancelSearchButton'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_contacts_controller.html#a100bfa6f356481b0857ada51b624ee94',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayContactsController.cancelSearchButton(javafx.event.ActionEvent event)']]],
+  ['changeview_2',['ChangeView',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1change_1_1_change_view.html',1,'it.unisa.diem.gruppo9.interfaces.change.ChangeView'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1change_1_1_change_view.html#adf561a69d4175d73ec225b2e7411f4b8',1,'it.unisa.diem.gruppo9.interfaces.change.ChangeView.ChangeView()']]],
+  ['changeview_2ejava_3',['ChangeView.java',['../_change_view_8java.html',1,'']]],
+  ['comparator_4',['comparator',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_name_and_surname_comparator_test.html#a375f9b0dcbfdcfd65f6c2027e0fd8e12',1,'it::unisa::diem::gruppo9::logic::NameAndSurnameComparatorTest']]],
+  ['compare_5',['compare',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_name_and_surname_comparator.html#a94bd687797dd111bb35aab6643f589da',1,'it::unisa::diem::gruppo9::logic::NameAndSurnameComparator']]],
+  ['contact_6',['Contact',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact.html',1,'it.unisa.diem.gruppo9.logic.Contact'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact.html#ab28c6abd1495934f82926a55136dd7f3',1,'it.unisa.diem.gruppo9.logic.Contact.Contact()']]],
+  ['contact_7',['contact',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_test.html#a52075a15eb260139a8aa2a816c707f0b',1,'it::unisa::diem::gruppo9::logic::ContactTest']]],
+  ['contact_2ejava_8',['Contact.java',['../_contact_8java.html',1,'']]],
+  ['contactaware_9',['ContactAware',['../interfaceit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_aware.html',1,'it::unisa::diem::gruppo9::logic']]],
+  ['contactaware_2ejava_10',['ContactAware.java',['../_contact_aware_8java.html',1,'']]],
+  ['contactmanager_11',['ContactManager',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager.html',1,'it.unisa.diem.gruppo9.logic.ContactManager'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager.html#ab2fc5597c35382ada048ec49d1982e33',1,'it.unisa.diem.gruppo9.logic.ContactManager.ContactManager()']]],
+  ['contactmanager_12',['contactManager',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager_test.html#a321a21ab7605a18ec0fac8b4cd3b0b96',1,'it::unisa::diem::gruppo9::logic::ContactManagerTest']]],
+  ['contactmanager_2ejava_13',['ContactManager.java',['../_contact_manager_8java.html',1,'']]],
+  ['contactmanageraware_14',['ContactManagerAware',['../interface_contact_manager_aware.html',1,'ContactManagerAware'],['../interfaceit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager_aware.html',1,'it.unisa.diem.gruppo9.logic.ContactManagerAware']]],
+  ['contactmanageraware_2ejava_15',['ContactManagerAware.java',['../_contact_manager_aware_8java.html',1,'']]],
+  ['contactmanagertest_16',['ContactManagerTest',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager_test.html',1,'it::unisa::diem::gruppo9::logic']]],
+  ['contactmanagertest_2ejava_17',['ContactManagerTest.java',['../_contact_manager_test_8java.html',1,'']]],
+  ['contacts_18',['contacts',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_base_controller.html#a87d27c6a0f5ce02a539cf022ec6843f4',1,'it.unisa.diem.gruppo9.interfaces.controller.BaseController.contacts'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager.html#af8383565fe1505a58e7826caeb585535',1,'it.unisa.diem.gruppo9.logic.ContactManager.contacts']]],
+  ['contacttest_19',['ContactTest',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_test.html',1,'it::unisa::diem::gruppo9::logic']]],
+  ['contacttest_2ejava_20',['ContactTest.java',['../_contact_test_8java.html',1,'']]],
+  ['contactview_21',['contactView',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1change_1_1_change_view.html#aa82ea3cbfac1c5103d31ee2e61cd4f60',1,'it::unisa::diem::gruppo9::interfaces::change::ChangeView']]],
+  ['createcontact_22',['createContact',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager.html#af8fe68270c458130bdf65df56c39a223',1,'it::unisa::diem::gruppo9::logic::ContactManager']]]
+];

@@ -2,7 +2,7 @@ ENGLISH:
 About Design Changes
 
 The architectural design reference for understanding the high-level structure of the BricoRubrica system is detailed in “Design_Document__Ver_2_0.pdf”. In the "Class Diagrams__Ver_2_0.png" file its portrayed a detailed version of the class diagrams.
-Moreover, all the update to the Detailed Design structure, due to the reviews on the architecture and to the coding phase, can be found in the "html" directory or in the doxyfile associated.
+Moreover, all the update to the Detailed Design structure, due to the reviews on the architecture and to the coding phase, can be found in the "Doxygen" directory; this directory contains both the "html__Ver*" directories of the associated JavaDOC versions.
 
 The updated system architecture retains the core principles established in the initial version, with refinements informed by insights from the coding and testing phases. Key changes include:
 
@@ -24,7 +24,7 @@ ITALIAN:
 In merito ai cambiamenti di Design
 
 Il riferimento per la progettazione architetturale, utile a comprendere la struttura e il design ad alto livello del sistema BricoRubrica, è descritto in “Design_Document__Ver_2_0.pdf”. Nel file "Class Diagrams__Ver_2_0.png" è rappresentata una versione più chiara dei diagrammi delle classi.
-Inoltre, tutte le revisioni sul design di dettaglio, dipendenti dagli aggiornamenti architetturali e dalle considerazioni in fase di coding, possono essere viste nella cartella "html" o nel doxyfile associato.
+Inoltre, tutte le revisioni sul design di dettaglio, dipendenti dagli aggiornamenti architetturali e dalle considerazioni in fase di coding, possono essere viste nella cartella "Doxygen"; questa cartella contiene entrambe le cartelle "html__Ver*" con le versioni di JavaDOC associate.
 
 L’architettura aggiornata del sistema mantiene i principi fondamentali definiti nella versione iniziale, con miglioramenti basati su osservazioni derivate dalle fasi di coding e testing. I cambiamenti principali includono:
 
