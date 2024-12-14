@@ -39,7 +39,7 @@ import javafx.scene.control.TextField;
  * contact's fields
  *
  * @author gruppo9
- * @version 1.1
+ * @version 2.0
  * @date 2024-12-07
  */
 public class DisplayAddContactController extends BaseController {

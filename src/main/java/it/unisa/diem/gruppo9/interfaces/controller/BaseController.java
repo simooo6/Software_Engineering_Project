@@ -71,7 +71,7 @@ import it.unisa.diem.gruppo9.logic.ContactAware;
  * @see ChangeView.java
  *
  * @author gruppo9
- * @version 1.1
+ * @version 2.0
  * @since 2024-12-12
  */
 public class BaseController implements ContactManagerAware, ContactAware {

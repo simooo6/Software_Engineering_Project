@@ -27,7 +27,7 @@ import javafx.collections.ObservableList;
  * @see DataManager.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-07
  */
 public class ContactManager implements DataManager {

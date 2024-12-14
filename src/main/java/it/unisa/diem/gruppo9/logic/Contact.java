@@ -21,7 +21,7 @@ package it.unisa.diem.gruppo9.logic;
  * </p>
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-06
  */
 public class Contact {

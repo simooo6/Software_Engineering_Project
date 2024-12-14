@@ -34,7 +34,7 @@ package it.unisa.diem.gruppo9.logic;
  * @see DisplayEditContactController.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version new 2.0
  * @since 2024-12-07
  */
 /**

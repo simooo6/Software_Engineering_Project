@@ -43,7 +43,7 @@ import javafx.scene.control.TextField;
  * @see Contact.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-07
  */
 public class DisplayEditContactController extends BaseController implements ContactManagerAware {

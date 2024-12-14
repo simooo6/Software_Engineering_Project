@@ -36,7 +36,7 @@ package it.unisa.diem.gruppo9.logic;
  * @see BaseController.java
  *
  * @author gruppo9
- * @version 1.1
+ * @version 2.0
  * @date 2024-12-12
  */
 /**

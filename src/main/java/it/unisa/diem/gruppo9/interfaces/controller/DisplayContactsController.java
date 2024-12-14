@@ -58,7 +58,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * @see Initializable
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-07
  */
 public class DisplayContactsController extends BaseController {

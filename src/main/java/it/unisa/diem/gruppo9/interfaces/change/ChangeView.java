@@ -71,7 +71,7 @@ import javafx.scene.Scene;
  * @see ContactManager.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-07
  */
 public class ChangeView {
