@@ -39,7 +39,7 @@ import javafx.scene.control.TextField;
  * contact's fields
  *
  * @author gruppo9
- * @version 1.0
+ * @version 1.1
  * @date 2024-12-07
  */
 public class DisplayAddContactController extends BaseController {
@@ -119,6 +119,19 @@ public class DisplayAddContactController extends BaseController {
     /**
      * Handles the back end binding of the addButton. The addButton will be deatcivated
      * till almost one between name and surname is not empty.
+     * 
+     * @invariant {@code addButton}, {@code nameField},{@code surnameField} must remain valid and
+     * not null for the duration of the binding
+     * @invariant The condition for the binding always evaluates to a valid boolen
+     * value (true or false), wich dirrectly affects the {@code disableProperty}
+     * @pre {@code addButton}, {@code nameField},{@code surnameField}  must
+     * be properly initialized and cannot be null
+     * @pre {@code namefield.textProperty()} and {@code surnameField.textProperty()} 
+     * must be properly observable to allow the binding to work
+     * @post The {@code addButton} will be disabled whenever both name
+     * and surname field are empty
+     * @post The {@code addButton} will be enabled as soon as at least
+     * one between name and surname field is not empty
      */
     public void initialize() {
         addButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
