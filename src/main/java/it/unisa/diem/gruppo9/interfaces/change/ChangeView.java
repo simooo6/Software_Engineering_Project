@@ -140,7 +140,7 @@ public class ChangeView {
             controller.initialize();
 
         } catch (IOException e) {
-            System.out.println("Error");
+            System.out.println("Error in contactView");
         }
     }
 
@@ -192,7 +192,7 @@ public class ChangeView {
             controller.setContacts(contacts);
 
         } catch (IOException e) {
-            System.out.println("Error");
+            System.out.println("Error in addContactView");
         }
     }
 
@@ -248,7 +248,7 @@ public class ChangeView {
             controller.setField();
 
         } catch (IOException e) {
-            System.out.println("Error");
+            System.out.println("Error in editContactView");
         }
     }
 }

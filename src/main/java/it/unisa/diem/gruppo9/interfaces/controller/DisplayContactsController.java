@@ -209,6 +209,7 @@ public class DisplayContactsController extends BaseController {
      *
      * @param event The Action Event triggered by clicking the save button
      */
+    @FXML
     private void saveContactButton(javafx.event.ActionEvent event) throws IOException {
         ContactManager contacts = getContacts();
         contacts.saveContact();
