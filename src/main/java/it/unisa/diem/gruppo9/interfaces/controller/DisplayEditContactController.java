@@ -123,31 +123,32 @@ public class DisplayEditContactController extends BaseController implements Cont
     /**
      * Constructs an instance of the {@code DisplayEditContactController}.
      * <p>
-     * This constructor initializes the {@code ChangeView} instance used for managing
-     * view transitions.
+     * This constructor initializes the {@code ChangeView} instance used for
+     * managing view transitions.
      * </p>
      *
      * @invariant The view object is always a valid instance of ChangeView.
      *
      * @pre The {@code ChangeView} class must be available in the project and
      * correctly defined.
-     * @post A new instance of {@code DisplayEditContactController} is created with
-     * a valid {@code ChangeView} object.
+     * @post A new instance of {@code DisplayEditContactController} is created
+     * with a valid {@code ChangeView} object.
      */
-    public DisplayEditContactController(){
+    public DisplayEditContactController() {
         view = new ChangeView();
     }
 
     /**
      * Initializes the controller after its elements have been loaded.
      * <p>
-     * This method sets up the logic for disabling the "editButton" if both the name
-     * and surname fields are empty. It uses a property binding to monitor changes
-     * in the text fields.
+     * This method sets up the logic for disabling the "editButton" if both the
+     * name and surname fields are empty. It uses a property binding to monitor
+     * changes in the text fields.
      * </p>
      *
      * @pre The FXML elements must be properly loaded and connected.
-     * @post The "editButton" will be disabled if both the "nameField" and "surnameField" are empty.
+     * @post The "editButton" will be disabled if both the "nameField" and
+     * "surnameField" are empty.
      */
     public void initialize() {
         editButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
@@ -156,12 +157,13 @@ public class DisplayEditContactController extends BaseController implements Cont
     /**
      * Fills the input fields with the details of the selected contact.
      * <p>
-     * This method gets the currently selected contact and sets
-     * the values of the name, surname, phone numbers, and email fields in the GUI.
+     * This method gets the currently selected contact and sets the values of
+     * the name, surname, phone numbers, and email fields in the GUI.
      * </p>
      *
      * @pre A valid {@code Contact} instance must be selected and setted.
-     * @post The input fields in the GUI will display the data of the selected contact.
+     * @post The input fields in the GUI will display the data of the selected
+     * contact.
      */
     public void setField() {
         Contact c = getSelectedContact();
@@ -188,21 +190,19 @@ public class DisplayEditContactController extends BaseController implements Cont
         contacts.deleteContact(c);
 
         String[] phoneNumber = {
-                phoneNumber1.getText().isEmpty() ? "-" : phoneNumber1.getText(),
-                phoneNumber2.getText().isEmpty() ? "-" : phoneNumber2.getText(),
-                phoneNumber3.getText().isEmpty() ? "-" : phoneNumber3.getText()
+            phoneNumber1.getText().isEmpty() ? "-" : phoneNumber1.getText(),
+            phoneNumber2.getText().isEmpty() ? "-" : phoneNumber2.getText(),
+            phoneNumber3.getText().isEmpty() ? "-" : phoneNumber3.getText()
         };
 
         String[] email = {
-                email1.getText().isEmpty() ? "-" : email1.getText(),
-                email2.getText().isEmpty() ? "-" : email2.getText(),
-                email3.getText().isEmpty() ? "-" : email3.getText()
+            email1.getText().isEmpty() ? "-" : email1.getText(),
+            email2.getText().isEmpty() ? "-" : email2.getText(),
+            email3.getText().isEmpty() ? "-" : email3.getText()
         };
 
-        // Aggiungi il contatto alla lista
-        contacts.addContacts(contacts.createContact(surnameField.getText(),nameField.getText(), phoneNumber, email));
+        contacts.addContacts(contacts.createContact(surnameField.getText(), nameField.getText(), phoneNumber, email));
 
-        // Passa alla vista dei contatti
         view.contactView(event, contacts);
     }
 

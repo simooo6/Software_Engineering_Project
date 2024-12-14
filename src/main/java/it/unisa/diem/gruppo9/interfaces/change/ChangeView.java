@@ -83,9 +83,11 @@ public class ChangeView {
      * setup. The methods provided in this class are used dynamically during
      * runtime by the controllers.
      * </p>
+     *
      * @pre -
      * @post a valid instance of {@code ChangeView} has been created
-     * @inv the {@code ChangeView} object is ready to be used with the defined public methods.
+     * @invariant the {@code ChangeView} object is ready to be used with the
+     * defined public methods.
      */
     public ChangeView() {
     }
@@ -116,10 +118,12 @@ public class ChangeView {
      * null.
      * @pre the file {@code ContactsView.fxml} must exisist and be accesibile
      * @pre the {@code ContactManger} must contain valid {@code Contact}
-     * 
+     *
      * @post the current scene is replaced with {@code ContactView.fxml}.
-     * @post an instance of {@code DisplayContactsController} has been initialised
-     * @post the method setContact as called on the controller and the contacts object was passed correctly
+     * @post an instance of {@code DisplayContactsController} has been
+     * initialised
+     * @post the method setContact as called on the controller and the contacts
+     * object was passed correctly
      * @post the initialize() method of the controller was invoked correctly.
      */
     public void contactView(ActionEvent event, ContactManager contacts) {
@@ -170,10 +174,12 @@ public class ChangeView {
      * @pre {@code contacts != null} The ContactManager must not be null.
      * @pre the file {@code ContactsView.fxml} must exisist and be accesibile
      * @pre the {@code ContactManger} must contain valid {@code Contact}
-     * 
+     *
      * @post The current scene is replaced with {@code AddView.fxml}.
-     * @post an instance of {@code DisplayAddContactController} has been initialised
-     * @post the method setContact as called on the controller and the contacts object was passed correctly
+     * @post an instance of {@code DisplayAddContactController} has been
+     * initialised
+     * @post the method setContact as called on the controller and the contacts
+     * object was passed correctly
      */
     public void addContactView(ActionEvent event, ContactManager contacts) {
         try {
@@ -207,10 +213,11 @@ public class ChangeView {
      * @param event the action event that triggered the scene change.
      * @param contacts the {@link ContactManager} instance used to manage
      * contact data.
-     * @param c the {@link Contact} that is selected in the {@code DisplayContactsView}
+     * @param c the {@link Contact} that is selected in the
+     * {@code DisplayContactsView}
      *
-     * @invariant the {@code ContactManager} instance must be unchanged during the
-     * transition
+     * @invariant the {@code ContactManager} instance must be unchanged during
+     * the transition
      * @invariant the
      * @invariant the {@code Contact} is not changed during the transition.
      *
@@ -220,16 +227,19 @@ public class ChangeView {
      * @pre {code c != null} the selected contact must not be null
      * @pre the file {@code ContactsView.fxml} must exisist and be accesibile
      * @pre the {@code ContactManger} must contain valid {@code Contact}
-     * @pre the {code Contact} c must be a valid object 
-     * 
+     * @pre the {code Contact} c must be a valid object
+     *
      * @post The current scene is replaced with {@code EditView.fxml}.
-     * @post an instance of {@code DisplayEditContactController} has been initialised
-     * @post the method setContact as called on the controller and the contacts object was passed correctly
-     * @post the method setSelectedContact as called on the controller and the contact object was passed correctly
+     * @post an instance of {@code DisplayEditContactController} has been
+     * initialised
+     * @post the method setContact as called on the controller and the contacts
+     * object was passed correctly
+     * @post the method setSelectedContact as called on the controller and the
+     * contact object was passed correctly
      * @post the setFiled() method of the controller was invoked correctly.
-     * 
+     *
      */
-    public void editContactView(ActionEvent event, ContactManager contacts,Contact c) {
+    public void editContactView(ActionEvent event, ContactManager contacts, Contact c) {
         try {
             // Carica la nuova vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/it/unisa/diem/gruppo9/interfaces/view/EditView.fxml"));

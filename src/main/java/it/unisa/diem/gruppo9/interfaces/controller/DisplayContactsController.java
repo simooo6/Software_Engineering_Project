@@ -153,8 +153,10 @@ public class DisplayContactsController extends BaseController {
      * with their respective values, and initialize the binding property of the
      * button: search, cancel, edit and delete.
      *
-     * @pre The tableView and the buttons must be correctly associated with thei
-     * respective references in the controller
+     * @invariant the ContactManager instance must be not modified
+     *
+     * @pre The tableView and the buttons must be correctly associated with
+     * their respective references in the controller
      * @pre the {@code getContact()} method must return a valid
      * {@code ContactManager} object
      * @pre The contact object retured by {@code getListOfContacts()} must
@@ -162,7 +164,7 @@ public class DisplayContactsController extends BaseController {
      *
      * @post The table view must be correctly populated with the contacts
      * @post Contact's data must be correctly displayed
-     * @post The button are enabled/disabled dinamically based on the specified
+     * @post The button are enabled/disabled dinamically based on the binding
      * conditions
      *
      */
@@ -194,6 +196,8 @@ public class DisplayContactsController extends BaseController {
     }
 
     /**
+     * @invariant The view object is always a valid instance of ChangeView.
+     *
      * @pre The {@code ChangeView} class must be available in the project and
      * correctly defined.
      * @post The view object has been initialised and contains a valid
