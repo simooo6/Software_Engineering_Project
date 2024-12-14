@@ -1,160 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController">
    <children>
-      <VBox prefHeight="800.0" prefWidth="1000.0">
-         <children>
-            <HBox prefHeight="300.0" prefWidth="500.0">
-               <children>
-                  <ImageView fitHeight="342.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
-                     <HBox.margin>
-                        <Insets left="30.0" right="30.0" top="30.0" />
-                     </HBox.margin>
-                     <image>
-                        <Image url="@img.jpg" />
-                     </image>
-                  </ImageView>
-                  <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="646.0">
-                     <children>
-                        <Label alignment="CENTER" text="Edit Contact">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="30.0" />
-                           </VBox.margin>
-                        </Label>
-                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="640.0">
-                           <children>
-                              <Label text="Name : ">
-                                 <font>
-                                    <Font size="48.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <TextField fx:id="nameField" prefHeight="17.0" prefWidth="185.0" scaleX="1.8" scaleY="3.0" translateX="186.0">
-                                 <padding>
-                                    <Insets left="20.0" right="20.0" />
-                                 </padding>
-                              </TextField>
-                           </children>
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="5.0" prefWidth="640.0">
-                           <children>
-                              <Label text="Surname :">
-                                 <font>
-                                    <Font size="48.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </Label>
-                              <TextField fx:id="surnnameField" prefHeight="17.0" prefWidth="175.0" scaleX="1.9" scaleY="3.0" translateX="140.0">
-                                 <padding>
-                                    <Insets left="20.0" right="20.0" />
-                                 </padding>
-                              </TextField>
-                           </children>
-                           <VBox.margin>
-                              <Insets top="40.0" />
-                           </VBox.margin>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <VBox prefHeight="350.0" prefWidth="1000.0">
-               <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="214.0" prefWidth="1000.0">
-                     <children>
-                        <Label alignment="CENTER" text="Phone Number :" translateX="20.0">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                        </Label>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="172.0" prefWidth="516.0" translateX="80.0">
-                           <children>
-                              <TextField fx:id="phoneNumber1" promptText="Phone number 1" scaleY="1.5" />
-                              <TextField fx:id="phoneNumber2" promptText="Phone number 2" scaleY="1.5">
-                                 <VBox.margin>
-                                    <Insets top="30.0" />
-                                 </VBox.margin>
-                              </TextField>
-                              <TextField fx:id="phoneNumber3" promptText="Phone number 3" scaleY="1.5">
-                                 <VBox.margin>
-                                    <Insets top="30.0" />
-                                 </VBox.margin>
-                              </TextField>
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="214.0" prefWidth="1000.0">
-                     <children>
-                        <Label alignment="CENTER" text="Email :" translateX="100.0">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                        </Label>
-                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="516.0" translateX="270.0">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <children>
-                              <TextField fx:id="email1" promptText="Email 1" scaleY="1.5" />
-                              <TextField fx:id="email2" promptText="Email 2" scaleY="1.5">
-                                 <VBox.margin>
-                                    <Insets top="30.0" />
-                                 </VBox.margin>
-                              </TextField>
-                              <TextField fx:id="email3" promptText="Email 3" scaleY="1.5">
-                                 <VBox.margin>
-                                    <Insets top="30.0" />
-                                 </VBox.margin>
-                              </TextField>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <HBox alignment="CENTER" prefHeight="117.0" prefWidth="1000.0">
-               <children>
-                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#editContactButton" text="Edit">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#viewContactManagerButton" text="Cancel">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
+      <Label layoutX="380.0" layoutY="71.0" text="Edit Contact">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="234.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="303.0" prefHeight="31.0" prefWidth="138.0" text="Surname:">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="384.0" text="Phone Number:">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="541.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="388.0" layoutY="249.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="surnameField" layoutX="388.0" layoutY="318.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="phoneNumber1" layoutX="388.0" layoutY="399.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="phoneNumber2" layoutX="388.0" layoutY="437.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="phoneNumber3" layoutX="388.0" layoutY="478.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="email3" layoutX="388.0" layoutY="635.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="email2" layoutX="388.0" layoutY="594.0" prefHeight="31.0" prefWidth="300.0" />
+      <TextField fx:id="email1" layoutX="388.0" layoutY="556.0" prefHeight="31.0" prefWidth="300.0" />
+      <Button fx:id="editButton" layoutX="740.0" layoutY="520.0" mnemonicParsing="false" onAction="#editContactButton" prefHeight="94.0" prefWidth="147.0" style="-fx-background-color: #000dff;" text="EDIT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" layoutX="740.0" layoutY="623.0" mnemonicParsing="false" onAction="#viewContactManagerButton" prefHeight="46.0" prefWidth="147.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Separator layoutX="1.0" layoutY="160.0" prefHeight="23.0" prefWidth="939.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" />
    </children>
-</Pane>
+</AnchorPane>
