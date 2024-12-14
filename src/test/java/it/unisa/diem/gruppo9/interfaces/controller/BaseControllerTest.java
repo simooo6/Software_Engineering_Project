@@ -26,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @see Contact.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-12
  */
 public class BaseControllerTest {
@@ -60,7 +60,8 @@ public class BaseControllerTest {
     }
 
     /**
-     * sets up resources before each test Initialize a new BaseController, a new
+     * Sets up resources before each test.
+     * Initialize a new BaseController, a new
      * ContactManager and a new Contact including empty arrays for phoneNumber
      * and email
      */
@@ -75,7 +76,8 @@ public class BaseControllerTest {
     }
 
     /**
-     * Cleans up the resources after eache test Sets all data to null to ensure
+     * Cleans up the resources after eache test.
+     * Sets all data to null to ensure
      * a succesful start of the sequent test
      */
     @AfterEach
@@ -88,8 +90,9 @@ public class BaseControllerTest {
 
     /**
      * @test Test the {@code setContacts} method with a valid
-     * {@code ContactManager} instance into the {@code BaseController}. Expected
-     * Result: -The {@code contacts} field is not null. -The {@code contacts}
+     * {@code ContactManager} instance into the {@code BaseController}.
+     * Expected Result:
+     * -The {@code contacts} field is not null. -The {@code contacts}
      * field contains the injected {@code ContactManager} instance.
      */
     @Test
@@ -102,9 +105,10 @@ public class BaseControllerTest {
 
     /**
      * @test Test the {@code setSelectedContact} method with a valid
-     * {@code Contact} instance into the {@code BaseController}. Expected
-     * Result: -The {@code selectedContact} field is not null. -The
-     * {@code selectedContact} field contains the injected {@code Contact}
+     * {@code Contact} instance into the {@code BaseController}.
+     * Expected Result:
+     * -The {@code selectedContact} field is not null. 
+     * -The {@code selectedContact} field contains the injected {@code Contact}
      * instance.
      */
     @Test
@@ -117,8 +121,9 @@ public class BaseControllerTest {
 
     /**
      * @test Test the {@code getSelectedContact} method with a {@code Contact}
-     * instance that was previously set. Expected Result: -The retrieved
-     * instance matches the previously injected {@code Contact} instance.
+     * instance that was previously set. 
+     * Expected Result:
+     * -The retrieved instance matches the previously injected {@code Contact} instance.
      */
     @Test
     public void testGetSelectedContact() {
@@ -130,8 +135,9 @@ public class BaseControllerTest {
 
     /**
      * @test Test the {@code getContacts} method with a {@code ContactManager}
-     * instance that was previously set. Expected Result: -The retrieved
-     * instance matches the previously injected {@code ContactManager} instance.
+     * instance that was previously set. 
+     * Expected Result: 
+     * -The retrieved instance matches the previously injected {@code ContactManager} instance.
      */
     @Test
     public void testGetContacts() {

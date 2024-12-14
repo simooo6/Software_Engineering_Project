@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  *
  * @author gruppo 9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-11
  */
 public class ContactTest {
@@ -65,6 +65,11 @@ public class ContactTest {
         System.out.println("\n\n\nFinished testing Contact.java.\n\n");
     }
 
+    /**
+     * Sets up the resources before each test.
+     * Initialize a new contact, including empty arrays for phone numbers
+     * and emails
+     */
     @BeforeEach
     public void setUp() {
         System.out.println("\n\nSetting up a new Contact instance to test...");
@@ -73,6 +78,11 @@ public class ContactTest {
         contact = new Contact("Dylan", "Bob", initialPhoneNumbers, initialEmails);
     }
 
+    /**
+     * Cleans up the resources after each test.
+     * Sets the contact instance to null to ensure a 
+     * succesful start of the sequent test
+     */
     @AfterEach
     public void tearDown() {
         System.out.println("Tearing down the Contact instance after test...");
@@ -84,8 +94,13 @@ public class ContactTest {
      * a valid input.
      *
      * Assert that the {@code Contact} object is created with the correct
-     * attributes. Expected Result: Contact with -> Surname:""; Name:"Bob";
-     * Phone Numbers ="1234567890","-","-"; Emails="test@example.com","-","-";
+     * attributes. 
+     * Expected Result:
+     * Contact with -> 
+     * Surname:"";
+     * Name:"Bob";
+     * Phone Numbers ="1234567890","-","-"; 
+     * Emails="test@example.com","-","-";
      */
     @Test
     public void testConstructorValidName() {
@@ -106,8 +121,13 @@ public class ContactTest {
      * a valid input.
      *
      * Assert that the {@code Contact} object is created with the correct
-     * attributes. Expected Result: Contact with -> Surname:"Dylan"; Name:"";
-     * Phone Numbers ="-","-","-"; Emails="-","-","-";
+     * attributes. 
+     * Expected Result: 
+     * Contact with -> 
+     * Surname:"Dylan";
+     * Name:"";
+     * Phone Numbers ="-","-","-"; 
+     * Emails="-","-","-";
      */
     @Test
     public void testConstructorValidSurname() {
@@ -128,8 +148,13 @@ public class ContactTest {
      * a valid input.
      *
      * Assert that the {@code Contact} object is created with the correct
-     * attributes. Expected Result: Contact with -> Surname:"Dylan"; Name:"Bob";
-     * Phone Numbers="1234567890","-","-"; Emails="test@example.com","-","-";
+     * attributes. 
+     * Expected Result:
+     * Contact with -> 
+     * Surname:"Dylan";
+     * Name:"Bob";
+     * Phone Numbers="1234567890","-","-"; 
+     * Emails="test@example.com","-","-";
      */
     @Test
     public void testConstructorValidNameAndSurname() {
@@ -195,8 +220,13 @@ public class ContactTest {
      * a valid input.
      *
      * Assert that the {@code Contact} object is created with the correct
-     * attributes. Expected Result: Contact with -> Surname:"Dylan"; Name:"Bob";
-     * Phone Numbers ="-","-","-"; Emails="-","-","-";
+     * attributes.
+     * Expected Result: 
+     * Contact with -> 
+     * Surname:"Dylan";
+     * Name:"Bob";
+     * Phone Numbers ="-","-","-";
+     * Emails="-","-","-";
      *
      */
     @Test
@@ -244,8 +274,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code getName()} method. Expected result: - the correct
-     * name is returned, Name="Bob"
+     * @test Verify the {@code getName()} method. 
+     * Expected result: 
+     * - the correct name is returned, Name="Bob"
      */
     @Test
     public void testGetName() {
@@ -254,8 +285,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code getSurname()} method. Expected Result: - the
-     * correct surname is returned, Surname="Dylan"
+     * @test Verify the {@code getSurname()} method. 
+     * Expected Result:
+     * - the correct surname is returned, Surname="Dylan"
      */
     @Test
     public void testGetSurname() {
@@ -264,8 +296,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code getPhoneNumber}. Expected result: - the correct
-     * phone number is returned, phoneNumber="1234567890","-","-"
+     * @test Verify the {@code getPhoneNumber}. 
+     * Expected result: 
+     * - the correct phone number is returned, phoneNumber="1234567890","-","-"
      */
     @Test
     public void testGetPhoneNumber() {
@@ -275,8 +308,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code getEmail} Expected Result: - the correct email is
-     * returned, email="test@example.com","-","-"
+     * @test Verify the {@code getEmail}.
+     * Expected Result:
+     * - the correct email is returned, email="test@example.com","-","-"
      */
     @Test
     public void testGetEmail() {
@@ -286,8 +320,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code setName} Expected Result: - the name is uptaded
-     * correctly, Name="Alice"
+     * @test Verify the {@code setName}.
+     * Expected Result: 
+     * - the name is uptaded correctly, Name="Alice"
      */
     @Test
     public void testSetName() {
@@ -297,8 +332,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code setSurname} Expected Result: - the surname is
-     * uptaded correctly, surname="inWonderland"
+     * @test Verify the {@code setSurname}.
+     * Expected Result:
+     * - the surname is uptaded correctly, surname="inWonderland"
      */
     @Test
     public void testSetSurname() {
@@ -308,8 +344,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code setPhoneNumber} Expected Result: - the phone
-     * number is uptaded correctly, phone number="9876543210", "1234567890","-"
+     * @test Verify the {@code setPhoneNumber}.
+     * Expected Result:
+     * - the phone number is uptaded correctly, phone number="9876543210", "1234567890","-"
      */
     @Test
     public void testSetPhoneNumberValid() {
@@ -333,8 +370,9 @@ public class ContactTest {
     }
 
     /**
-     * @test Verify the {@code setEmail} Expected Result: - the email is uptaded
-     * correctly, email="new@example.com", "another@example.com","-"
+     * @test Verify the {@code setEmail}.
+     * Expected Result:
+     * - the email is uptaded correctly, email="new@example.com", "another@example.com","-"
      */
     @Test
     public void testSetEmailValid() {

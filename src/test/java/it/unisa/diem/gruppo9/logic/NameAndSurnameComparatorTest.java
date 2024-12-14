@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @see NameAndSurnameComparator.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-12
  */
 public class NameAndSurnameComparatorTest {
@@ -62,9 +62,9 @@ public class NameAndSurnameComparatorTest {
     }
 
     /**
-     * Sets up resources befor each test Initialize a new
-     * NameAndSurnameComparator, including empty arrays for phone number and
-     * email
+     * Sets up resources befor each test.
+     * Initialize a new NameAndSurnameComparator,
+     * including empty arrays for phone number and email
      */
     @BeforeEach
     public void setUp() {
@@ -75,8 +75,8 @@ public class NameAndSurnameComparatorTest {
     }
 
     /**
-     * Cleans up the resources after each test Sets all data to null to ensure a
-     * fresh test of the sequent test
+     * Cleans up the resources after each test.
+     * Sets all data to null to ensure a succesful start of the sequent test
      */
     @AfterEach
     public void teardDown() {

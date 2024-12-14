@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Test;
  * @see ContactManager.java
  *
  * @author gruppo9
- * @version 1.0
+ * @version 2.0
  * @date 2024-12-12
  */
 public class ContactManagerTest {
@@ -61,6 +61,7 @@ public class ContactManagerTest {
     }
 
     /**
+     * Sets up resources before each test.
      * Initializes a new ContactManager instance before each test.
      */
     @BeforeEach
@@ -71,6 +72,8 @@ public class ContactManagerTest {
 
     /**
      * Cleans up resources after each test.
+     * Sets the ContactManager instance to null to 
+     * ensure a succesful start of the next test
      */
     @AfterEach
     public void tearDown() {
