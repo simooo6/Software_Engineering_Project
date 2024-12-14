@@ -120,14 +120,49 @@ public class DisplayEditContactController extends BaseController implements Cont
     @FXML
     private Button cancelButton;
 
+    /**
+     * Constructs an instance of the {@code DisplayEditContactController}.
+     * <p>
+     * This constructor initializes the {@code ChangeView} instance used for managing
+     * view transitions.
+     * </p>
+     *
+     * @invariant The view object is always a valid instance of ChangeView.
+     *
+     * @pre The {@code ChangeView} class must be available in the project and
+     * correctly defined.
+     * @post A new instance of {@code DisplayEditContactController} is created with
+     * a valid {@code ChangeView} object.
+     */
     public DisplayEditContactController(){
         view = new ChangeView();
     }
 
+    /**
+     * Initializes the controller after its elements have been loaded.
+     * <p>
+     * This method sets up the logic for disabling the "editButton" if both the name
+     * and surname fields are empty. It uses a property binding to monitor changes
+     * in the text fields.
+     * </p>
+     *
+     * @pre The FXML elements must be properly loaded and connected.
+     * @post The "editButton" will be disabled if both the "nameField" and "surnameField" are empty.
+     */
     public void initialize() {
         editButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
     }
 
+    /**
+     * Fills the input fields with the details of the selected contact.
+     * <p>
+     * This method gets the currently selected contact and sets
+     * the values of the name, surname, phone numbers, and email fields in the GUI.
+     * </p>
+     *
+     * @pre A valid {@code Contact} instance must be selected and setted.
+     * @post The input fields in the GUI will display the data of the selected contact.
+     */
     public void setField() {
         Contact c = getSelectedContact();
         surnameField.setText(c.getSurname());
