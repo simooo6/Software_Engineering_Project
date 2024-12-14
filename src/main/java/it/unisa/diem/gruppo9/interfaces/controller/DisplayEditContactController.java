@@ -7,6 +7,7 @@ import it.unisa.diem.gruppo9.logic.ContactManagerAware;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 
 /**
  * @file DisplayEditContactController.java
@@ -43,7 +44,7 @@ import javafx.scene.control.TextField;
  * @see Contact.java
  *
  * @author gruppo9
- * @version 2.0
+ * @version 2.1
  * @date 2024-12-07
  */
 public class DisplayEditContactController extends BaseController implements ContactManagerAware {
@@ -123,7 +124,7 @@ public class DisplayEditContactController extends BaseController implements Cont
      * </p>
      *
      * @invariant The view object is declared as a {@code ChangeView}.
-     *
+     *  
      * @pre The {@code ChangeView} class must be available in the project and
      * correctly defined.
      * @post A new instance of {@code DisplayEditContactController} is created
@@ -140,13 +141,22 @@ public class DisplayEditContactController extends BaseController implements Cont
      * name and surname fields are empty. It uses a property binding to monitor
      * changes in the text fields.
      * </p>
-     *
+     * @invariant Texfields {@code phoneNumber1},{@code phoneNumber2},{@code phoneNumber3} must only contain numbers or are empty. 
      * @pre The FXML elements must be properly loaded and connected.
      * @post The "editButton" will be disabled if both the "nameField" and
      * "surnameField" are empty.
      */
     public void initialize() {
         editButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
+        phoneNumber1.setTextFormatter(new TextFormatter<>(change -> 
+        (change.getControlNewText().matches("\\d*")) ? change : null
+        ));
+        phoneNumber2.setTextFormatter(new TextFormatter<>(change -> 
+        (change.getControlNewText().matches("\\d*")) ? change : null
+        ));
+        phoneNumber3.setTextFormatter(new TextFormatter<>(change -> 
+        (change.getControlNewText().matches("\\d*")) ? change : null
+        ));
     }
 
     /**
