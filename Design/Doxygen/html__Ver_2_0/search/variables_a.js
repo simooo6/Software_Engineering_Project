@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['view_0',['view',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_add_contact_controller.html#a56604a2a77d71d400d507e875e5ae00a',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayAddContactController.view'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_contacts_controller.html#ae0e68a3f3d0dc15eb246a55f56e39ee0',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayContactsController.view'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_edit_contact_controller.html#a9abf9031d9af4a69dc620061671e455a',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController.view'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_primary_display_controller.html#a05aac49075e3e7941eca7bb68b223fec',1,'it.unisa.diem.gruppo9.interfaces.controller.PrimaryDisplayController.view']]]
+];

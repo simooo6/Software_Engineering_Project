@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['cancelbutton_0',['cancelButton',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_add_contact_controller.html#abffe5cb788e6a2a47c2b2dfb0bde222c',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayAddContactController.cancelButton'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_edit_contact_controller.html#aa428c955fc1e9673d6eebce6f03f49e9',1,'it.unisa.diem.gruppo9.interfaces.controller.DisplayEditContactController.cancelButton']]],
+  ['cancelsearchbutton_1',['cancelSearchButton',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_display_contacts_controller.html#abf883f9e700a623f88652a3fb737f076',1,'it::unisa::diem::gruppo9::interfaces::controller::DisplayContactsController']]],
+  ['comparator_2',['comparator',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_name_and_surname_comparator_test.html#a375f9b0dcbfdcfd65f6c2027e0fd8e12',1,'it::unisa::diem::gruppo9::logic::NameAndSurnameComparatorTest']]],
+  ['contact_3',['contact',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_test.html#a52075a15eb260139a8aa2a816c707f0b',1,'it::unisa::diem::gruppo9::logic::ContactTest']]],
+  ['contactmanager_4',['contactManager',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager_test.html#a321a21ab7605a18ec0fac8b4cd3b0b96',1,'it::unisa::diem::gruppo9::logic::ContactManagerTest']]],
+  ['contacts_5',['contacts',['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1interfaces_1_1controller_1_1_base_controller.html#a87d27c6a0f5ce02a539cf022ec6843f4',1,'it.unisa.diem.gruppo9.interfaces.controller.BaseController.contacts'],['../classit_1_1unisa_1_1diem_1_1gruppo9_1_1logic_1_1_contact_manager.html#af8383565fe1505a58e7826caeb585535',1,'it.unisa.diem.gruppo9.logic.ContactManager.contacts']]]
+];
