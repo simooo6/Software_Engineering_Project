@@ -1,7 +1,5 @@
 package it.unisa.diem.gruppo9.main;
 
-import it.unisa.diem.gruppo9.interfaces.controller.PrimaryDisplayController;
-import it.unisa.diem.gruppo9.logic.ContactManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
