@@ -293,6 +293,9 @@ public class ContactManagerTest {
         contactManager.addContacts(contact);
 
         assertDoesNotThrow(() -> contactManager.saveContact());
+        
+        contactManager.deleteContact(contact);
+        assertDoesNotThrow(() -> contactManager.saveContact());
     }
 
     /**
