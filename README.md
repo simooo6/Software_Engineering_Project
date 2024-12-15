@@ -1,5 +1,5 @@
 Software Engineering Project 2024/25  
-Address Book like Java Application called "BricoRubrica", developed to provide 
+Address Book-like Java Application called "BricoRubrica", developed to provide 
 an interactive way to manage telephone contacts and/or e-mails.
 
 Requirements Analysis, Design and Development Team: 
